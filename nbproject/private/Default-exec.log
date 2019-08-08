@@ -1,0 +1,11 @@
+called: /usr/bin/g++
+	/Users/ernstv/OpenCV/projects/Test0001
+	/usr/bin/g++
+	-std=c++11
+	-ggdb
+	-o
+	Test0001
+	Test0001.cpp
+	Images.cpp
+	Messages.cpp
+

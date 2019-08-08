@@ -1,0 +1,13 @@
+g++ -std=c++11 -ggdb `pkg-config --cflags --libs opencv4` -o Test0001 Test0001.cpp Images.cpp Messages.cpp
+/bin/sh: pkg-config: command not found
+In file included from Test0001.cpp:1:
+./Images.h:11:10: fatal error: 'opencv2/core.hpp' file not found
+#include "opencv2/core.hpp"
+         ^~~~~~~~~~~~~~~~~~
+1 error generated.
+In file included from Images.cpp:8:
+./Images.h:11:10: fatal error: 'opencv2/core.hpp' file not found
+#include "opencv2/core.hpp"
+         ^~~~~~~~~~~~~~~~~~
+1 error generated.
+make: *** [all] Error 1
