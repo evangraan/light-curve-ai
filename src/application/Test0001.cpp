@@ -18,7 +18,7 @@ int main(int argc, char **argv) {
     images.Show();
     cout << "Press a key while focused on an image window to proceed.\n";
     waitKey(0);
-
+/*
     typedef std::chrono::high_resolution_clock Clock;
     auto start = Clock::now();
     std::vector<WorkerThreading::WaitForCompletionFuture<void>> v;
@@ -32,6 +32,8 @@ int main(int argc, char **argv) {
     }
     auto end = Clock::now();
     cout << "Time elapsed: " << chrono::duration_cast<chrono::milliseconds>(end - start).count() << '\n';
+*/
+    cout << "Comparison: " << images.compare(images.getColor(), images.getGray());
 
     return 0;
 }

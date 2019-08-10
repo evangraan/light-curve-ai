@@ -11,6 +11,9 @@
 #include "opencv2/core.hpp"
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgcodecs.hpp"
+#include "opencv2/imgproc.hpp"
+#include "opencv2/features2d.hpp"
+#include "opencv2/nonfree/features2d.hpp"
 
 using namespace std;
 using namespace cv;
@@ -32,9 +35,12 @@ public:
 	bool ExportGrayscale();
 	void OutputColorPixels();
 	void Show();
+        Mat getColor();
+        Mat getGray();
+        int compare(Mat templateImage, Mat image);
 
 private:
-	Mat color;
+    Mat color;
     Mat gray;
 };
 

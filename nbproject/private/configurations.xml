@@ -27,9 +27,6 @@
           <in>WorkerPool.h</in>
         </df>
       </df>
-      <in>Images.cpp</in>
-      <in>Messages.cpp</in>
-      <in>Test0001.cpp</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
