@@ -6,21 +6,26 @@ LIBS=-lstdc++ -lopencv_imgcodecs -lopencv_highgui -lopencv_core -lopencv_imgproc
 ARTIFACTS=*.o lcai *.dSym
 WORKFORCE=src/workforce
 WORKFORCE_SOURCES=$(WORKFORCE)/IWorker.cpp $(WORKFORCE)/SimpleWorker.cpp $(WORKFORCE)/WorkQueue.cpp $(WORKFORCE)/WorkerPool.cpp $(WORKFORCE)/WaitForCompletionFuture.cpp
+APPLICATION=src/application
+APPLICATION_SOURCES=$(APPLICATION)/Test0001.cpp
+ASPECTS_SOURCES=$(APPLICATION)/Images.cpp $(APPLICATION)/Messages.cpp
+EXECUTABLE=lcai
 
 default: all
 
-all: workforce aspects main
-	$(CC) $(AFLAGS) *.o -o lcai $(INCLUDES) $(LIBS)
+all: workforce aspects application
+	$(CC) $(AFLAGS) *.o -o $(EXECUTABLE) $(INCLUDES) $(LIBS)
 
-main: workforce aspects Test0001.cpp
-	$(CC) $(CFLAGS) Test0001.cpp $(INCLUDES) $(LIBS)
+application: workforce aspects $(APPLICATION_SOURCES)
+	$(CC) $(CFLAGS) $(APPLICATION_SOURCES) $(INCLUDES) $(LIBS)
 
 workforce: $(WORKFORCE_SOURCES)
 	$(CC) $(CFLAGS) $(WORKFORCE_SOURCES) $(INCLUDES) $(LIBS)
 
-aspects: Messages.cpp Images.cpp
-	$(CC) $(CFLAGS) Messages.cpp Images.cpp $(INCLUDES) $(LIBS)
+aspects: $(ASPECTS_SOURCES)
+	$(CC) $(CFLAGS) $(ASPECTS_SOURCES) $(INCLUDES) $(LIBS)
 	
 clean:
 	rm -f $(ARTIFACTS)
-	rm -f src/workforce/$(ARTIFACTS)
+	rm -f $(WORKFORCE)/$(ARTIFACTS)
+	rm -f $(APPLICATION)/$(ARTIFACTS)

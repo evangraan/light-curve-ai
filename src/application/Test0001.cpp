@@ -1,8 +1,8 @@
 #include <utility>
 #include <chrono>
 #include "Images.h"
-#include "src/workforce/WorkQueue.h"
-#include "src/workforce/WorkerPool.h"
+#include "../workforce/WorkQueue.h"
+#include "../workforce/WorkerPool.h"
 using namespace WorkerThreading;
 using namespace Workforce;
 

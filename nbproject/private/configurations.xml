@@ -7,6 +7,13 @@
       <df name="images">
       </df>
       <df name="src">
+        <df name="application">
+          <in>Images.cpp</in>
+          <in>Images.h</in>
+          <in>Messages.cpp</in>
+          <in>Messages.h</in>
+          <in>Test0001.cpp</in>
+        </df>
         <df name="workforce">
           <in>IWorker.cpp</in>
           <in>IWorker.h</in>
@@ -21,9 +28,7 @@
         </df>
       </df>
       <in>Images.cpp</in>
-      <in>Images.h</in>
       <in>Messages.cpp</in>
-      <in>Messages.h</in>
       <in>Test0001.cpp</in>
     </df>
   </logicalFolder>
