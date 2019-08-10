@@ -9,7 +9,7 @@
 #include <queue>
 #include <utility>
 
-namespace Threading
+namespace WorkerThreading
 {
     template <typename T>
     class WorkQueue

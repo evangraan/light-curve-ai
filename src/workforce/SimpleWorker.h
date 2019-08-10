@@ -20,7 +20,7 @@
 #include <vector>
 #include "IWorker.h"
 
-namespace Threading
+namespace WorkerThreading
 {
     template <typename Func>
     class SimpleWorker : public IWorker {

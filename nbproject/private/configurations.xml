@@ -20,13 +20,11 @@
           <in>WorkerPool.h</in>
         </df>
       </df>
-      <in>IWorker.h</in>
       <in>Images.cpp</in>
       <in>Images.h</in>
       <in>Messages.cpp</in>
       <in>Messages.h</in>
       <in>Test0001.cpp</in>
-      <in>WaitForCompletionFuture.h</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

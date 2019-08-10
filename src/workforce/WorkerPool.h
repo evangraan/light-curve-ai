@@ -26,7 +26,7 @@
 #include <utility>
 #include <vector>
 
-namespace Threading
+namespace WorkerThreading
 {
     class WorkerPool
     {

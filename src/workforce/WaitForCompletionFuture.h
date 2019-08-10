@@ -19,7 +19,7 @@
 #include <utility>
 #include <vector>
 
-namespace Threading
+namespace WorkerThreading
 {
     template <typename T>
     class WaitForCompletionFuture {

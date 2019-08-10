@@ -3,7 +3,7 @@
 #include "Images.h"
 #include "src/workforce/WorkQueue.h"
 #include "src/workforce/WorkerPool.h"
-using namespace Threading;
+using namespace WorkerThreading;
 using namespace Workforce;
 
 int main(int argc, char **argv) {
@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
 
     typedef std::chrono::high_resolution_clock Clock;
     auto start = Clock::now();
-    std::vector<Threading::WaitForCompletionFuture<void>> v;
+    std::vector<WorkerThreading::WaitForCompletionFuture<void>> v;
     for (std::uint32_t i = 0u; i < 21u; ++i) {
         v.push_back(Workforce::enqueue([]() {
             std::this_thread::sleep_for(std::chrono::seconds(1));

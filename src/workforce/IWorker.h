@@ -8,7 +8,7 @@
 #ifndef IWORKER_H
 #define IWORKER_H
 
-namespace Threading
+namespace WorkerThreading
 {
     class IWorker
     {
