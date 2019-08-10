@@ -6,21 +6,27 @@
       </df>
       <df name="images">
       </df>
-      <df name="Test0001.dSYM">
-        <df name="Contents">
-          <df name="Resources">
-            <df name="DWARF">
-            </df>
-          </df>
+      <df name="src">
+        <df name="workforce">
+          <in>IWorker.cpp</in>
+          <in>IWorker.h</in>
+          <in>SimpleWorker.cpp</in>
+          <in>SimpleWorker.h</in>
+          <in>WaitForCompletionFuture.cpp</in>
+          <in>WaitForCompletionFuture.h</in>
+          <in>WorkQueue.cpp</in>
+          <in>WorkQueue.h</in>
+          <in>WorkerPool.cpp</in>
+          <in>WorkerPool.h</in>
         </df>
       </df>
+      <in>IWorker.h</in>
       <in>Images.cpp</in>
       <in>Images.h</in>
       <in>Messages.cpp</in>
       <in>Messages.h</in>
       <in>Test0001.cpp</in>
-      <in>WorkLoad.cpp</in>
-      <in>WorkLoad.h</in>
+      <in>WaitForCompletionFuture.h</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -28,7 +34,7 @@
     <conf name="Default" type="0">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <platform>4</platform>
+        <platform>2</platform>
       </toolsSet>
       <compile>
         <compiledirpicklist>

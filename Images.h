@@ -15,6 +15,8 @@
 using namespace std;
 using namespace cv;
 
+#pragma once
+
 #ifndef IMAGES_H_
 #define IMAGES_H_
 
