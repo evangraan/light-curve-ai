@@ -5,6 +5,8 @@
       <df name=".settings">
       </df>
       <df name="images">
+        <df name="lc">
+        </df>
       </df>
       <df name="src">
         <df name="application">
@@ -13,6 +15,10 @@
           <in>Messages.cpp</in>
           <in>Messages.h</in>
           <in>Test0001.cpp</in>
+        </df>
+        <df name="processing">
+          <in>ChiSquaredProcessor.cpp</in>
+          <in>ChiSquaredProcessor.h</in>
         </df>
         <df name="workforce">
           <in>IWorker.cpp</in>

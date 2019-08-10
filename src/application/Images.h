@@ -22,25 +22,12 @@ using namespace cv;
 #ifndef IMAGES_H_
 #define IMAGES_H_
 
-extern const std::string SHOES;
-extern const std::string SHOES_GRAYSCALE;
-
 class Images {
 
 public:
 	Images();
 	virtual ~Images();
-	bool Load();
-	bool ExportGrayscale();
-	void OutputColorPixels();
-	void Show();
-        Mat getColor();
-        Mat getGray();
-        int compare(Mat templateImage, Mat image);
-
-private:
-    Mat color;
-    Mat gray;
+        double compare(Mat src_base, Mat src_test1, int method);
 };
 
 #endif /* IMAGES_H_ */
