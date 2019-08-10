@@ -54,74 +54,31 @@ Mat Images::getGray() {
     return gray;
 }
 
-int Images::compare(Mat templateImage, Mat compareImage) {
-    if (!templateImage.data || !compareImage.data) {
-        printf(" --(!) Error reading images \n");
-        return -1;
+int Images::compare(Mat src_base, Mat src_test1) {
+    Mat hsv_base, hsv_test1;
+    cvtColor(src_base, hsv_base, COLOR_BGR2HSV);
+    cvtColor(src_test1, hsv_test1, COLOR_BGR2HSV);
+    Mat hsv_half_down = hsv_base(Range(hsv_base.rows / 2, hsv_base.rows), Range(0, hsv_base.cols));
+    int h_bins = 50, s_bins = 60;
+    int histSize[] = {h_bins, s_bins};
+    float h_ranges[] = {0, 180};
+    float s_ranges[] = {0, 256};
+    const float* ranges[] = {h_ranges, s_ranges};
+    int channels[] = {0, 1};
+    Mat hist_base, hist_half_down, hist_test1, hist_test2;
+    calcHist(&hsv_base, 1, channels, Mat(), hist_base, 2, histSize, ranges, true, false);
+    normalize(hist_base, hist_base, 0, 1, NORM_MINMAX, -1, Mat());
+    calcHist(&hsv_half_down, 1, channels, Mat(), hist_half_down, 2, histSize, ranges, true, false);
+    normalize(hist_half_down, hist_half_down, 0, 1, NORM_MINMAX, -1, Mat());
+    calcHist(&hsv_test1, 1, channels, Mat(), hist_test1, 2, histSize, ranges, true, false);
+    normalize(hist_test1, hist_test1, 0, 1, NORM_MINMAX, -1, Mat());
+    for (int compare_method = 0; compare_method < 4; compare_method++) {
+        double base_base = compareHist(hist_base, hist_base, compare_method);
+        double base_half = compareHist(hist_base, hist_half_down, compare_method);
+        double base_test1 = compareHist(hist_base, hist_test1, compare_method);
+        cout << "Method " << compare_method << " : "
+                << base_base << " / " << base_half << " / " << base_test1 << endl;
     }
-
-    //-- Step 1: Detect the keypoints using SURF Detector
-    int minHessian = 400;
-
-    SurfFeatureDetector detector(minHessian);
-
-    std::vector<KeyPoint> keypoints_1, keypoints_2;
-
-    detector.detect(templateImage, keypoints_1);
-    detector.detect(compareImage, keypoints_2);
-
-    //-- Step 2: Calculate descriptors (feature vectors)
-    SurfDescriptorExtractor extractor;
-
-    Mat descriptors_1, descriptors_2;
-
-    extractor.compute(templateImage, keypoints_1, descriptors_1);
-    extractor.compute(compareImage, keypoints_2, descriptors_2);
-
-    //-- Step 3: Matching descriptor vectors using FLANN matcher
-    FlannBasedMatcher matcher;
-    std::vector< DMatch > matches;
-    matcher.match(descriptors_1, descriptors_2, matches);
-
-    double max_dist = 0;
-    double min_dist = 100;
-
-    //-- Quick calculation of max and min distances between keypoints
-    for (int i = 0; i < descriptors_1.rows; i++) {
-        double dist = matches[i].distance;
-        if (dist < min_dist) min_dist = dist;
-        if (dist > max_dist) max_dist = dist;
-    }
-
-    printf("-- Max dist : %f \n", max_dist);
-    printf("-- Min dist : %f \n", min_dist);
-
-    //-- Draw only "good" matches (i.e. whose distance is less than 2*min_dist,
-    //-- or a small arbitary value ( 0.02 ) in the event that min_dist is very
-    //-- small)
-    //-- PS.- radiusMatch can also be used here.
-    std::vector< DMatch > good_matches;
-
-    for (int i = 0; i < descriptors_1.rows; i++) {
-        if (matches[i].distance <= max(2 * min_dist, 0.02)) {
-            good_matches.push_back(matches[i]);
-        }
-    }
-
-    //-- Draw only "good" matches
-    Mat img_matches;
-    drawMatches(templateImage, keypoints_1, compareImage, keypoints_2,
-            good_matches, img_matches, Scalar::all(-1), Scalar::all(-1),
-            vector<char>(), DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS);
-
-    //-- Show detected matches
-    imshow("Good Matches", img_matches);
-
-    for (int i = 0; i < (int) good_matches.size(); i++) {
-        printf("-- Good Match [%d] Keypoint 1: %d  -- Keypoint 2: %d  \n", i, good_matches[i].queryIdx, good_matches[i].trainIdx);
-    }
-
-    waitKey(0);
-    
-    return good_matches.size();
+    cout << "Done \n";
+    return 0;
 }

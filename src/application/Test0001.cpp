@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
     auto end = Clock::now();
     cout << "Time elapsed: " << chrono::duration_cast<chrono::milliseconds>(end - start).count() << '\n';
 */
-    cout << "Comparison: " << images.compare(images.getColor(), images.getGray());
+    cout << images.compare(images.getColor(), images.getColor());
 
     return 0;
 }
