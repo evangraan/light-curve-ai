@@ -1,3 +1,0 @@
-/home/ernstv/build/opencv/projects/Test0001/test/CMakeFiles/rebuild_cache.dir
-/home/ernstv/build/opencv/projects/Test0001/test/CMakeFiles/runTests.dir
-/home/ernstv/build/opencv/projects/Test0001/test/CMakeFiles/edit_cache.dir

@@ -7,9 +7,11 @@
 
 #include "Messages.h"
 
-extern const std::string FILE_NOT_FOUND = "File not found: ";
-extern const std::string PIXELS_LABEL = "Pixels: ";
-extern const std::string SHOW_COLOR_LABEL = "Color: ";
-extern const std::string SHOW_GRAYSCALE_LABEL = "Grayscale: ";
-extern const std::string TIME_ELAPSED = "Time Elapsed: ";
-extern const std::string PROCESSING = "Processing: ";
+using namespace std;
+
+extern const string FILE_NOT_FOUND = "File not found: ";
+extern const string PIXELS_LABEL = "Pixels: ";
+extern const string SHOW_COLOR_LABEL = "Color: ";
+extern const string SHOW_GRAYSCALE_LABEL = "Grayscale: ";
+extern const string TIME_ELAPSED = "Time Elapsed: ";
+extern const string PROCESSING = "Processing: ";

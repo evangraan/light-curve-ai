@@ -1,8 +1,5 @@
 #include <gtest/gtest.h>
- 
-TEST(SquareTest, PositiveNos) { 
-    ASSERT_EQ(36, 6*6);
-}
+#include "processing/ImageTests.h"
  
 TEST(SquareTest, NegativeNos) {
     ASSERT_EQ(1.0, -1*-1);

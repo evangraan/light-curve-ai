@@ -5,9 +5,10 @@
 #include "../processing/Orchestrator.h"
 
 using namespace LightCurveAnalysis;
+using namespace std;
 
 int main(int argc, char **argv) {
-    typedef std::chrono::high_resolution_clock Clock;
+    typedef chrono::high_resolution_clock Clock;
     auto start = Clock::now();
     
     Orchestrator orchestrator;

@@ -23,17 +23,19 @@
 #include <opencv2/highgui.hpp>
 #include <fstream>
 
+using namespace std;
+
 namespace LightCurveAnalysis{
     class ChiSquaredProcessor : IProcessor{
     public:
         ChiSquaredProcessor();
         ChiSquaredProcessor(const ChiSquaredProcessor& orig);
         virtual ~ChiSquaredProcessor();
-        void process(std::string templateCurvePath, std::string curvePath) override;
+        void process(string templateCurvePath, string curvePath) override;
         
     private:
-        double calculateFit(std::string templateCurvePath, std::string curvePath) override;
-        void outputResult(double fit, std::string curvePath) override;
+        double calculateFit(string templateCurvePath, string curvePath) override;
+        void outputResult(double fit, string curvePath) override;
     };
 }
 

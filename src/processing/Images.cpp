@@ -11,6 +11,7 @@
 #define TEST_SKIP 1
 
 using namespace LightCurveAnalysis;
+using namespace cv;
 
 Images::Images() {
 }
@@ -23,8 +24,8 @@ double Images::compare(Mat src_base, Mat src_test1, int method) {
     return 0;
 #else
     Mat hsv_base, hsv_test1;
-    cvtColor(src_base, hsv_base, cv::COLOR_RGB2HSV);
-    cvtColor(src_test1, hsv_test1, cv::COLOR_RGB2HSV);
+    cvtColor(src_base, hsv_base, COLOR_RGB2HSV);
+    cvtColor(src_test1, hsv_test1, COLOR_RGB2HSV);
     Mat hsv_half_down = hsv_base(Range(hsv_base.rows / 2, hsv_base.rows), Range(0, hsv_base.cols));
     int h_bins = 50, s_bins = 60;
     int histSize[] = {h_bins, s_bins};

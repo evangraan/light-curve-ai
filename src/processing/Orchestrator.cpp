@@ -10,10 +10,11 @@
 using namespace LightCurveAnalysis;
 using namespace WorkerThreading;
 using namespace Workforce;
+using namespace std;
 
-extern const std::string DATA_DIR = "/home/ernstv/build/opencv/projects/Test0001/images";
-extern const std::string IMAGES_DIR = DATA_DIR + "/lc";
-extern const std::string TEMPLATE = DATA_DIR + "/template.jpg";
+extern const string DATA_DIR = "/home/ernstv/build/opencv/projects/Test0001/images";
+extern const string IMAGES_DIR = DATA_DIR + "/lc";
+extern const string TEMPLATE = DATA_DIR + "/template.jpg";
 
 Orchestrator::Orchestrator() {
 }
@@ -26,8 +27,8 @@ Orchestrator::~Orchestrator() {
 
 void Orchestrator::queueForWork(dirent * dp){
     m_futures.push_back(Workforce::enqueue([dp]() {
-                std::string path = IMAGES_DIR + "/" + dp->d_name; 
-                std::cout << PROCESSING << path << std::endl;
+                string path = IMAGES_DIR + "/" + dp->d_name; 
+                cout << PROCESSING << path << endl;
                 ChiSquaredProcessor processor;
                 processor.process(IMAGES_DIR, path);
             }));

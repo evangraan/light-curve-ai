@@ -10,17 +10,19 @@
 
 #include "Images.h"
 
+using namespace std;
+
 namespace LightCurveAnalysis{
     class IProcessor {
     public:
         IProcessor() = default;
         IProcessor(const IProcessor& orig) = delete;
         virtual ~IProcessor() = default;
-        virtual void process(std::string templateCurvePath, std::string curvePath) = 0;
+        virtual void process(string templateCurvePath, string curvePath) = 0;
 
     private:
-        virtual double calculateFit(std::string templateCurvePath, std::string curvePath) = 0;
-        virtual void outputResult(double fit, std::string curvePath) = 0;
+        virtual double calculateFit(string templateCurvePath, string curvePath) = 0;
+        virtual void outputResult(double fit, string curvePath) = 0;
     };
 }
 

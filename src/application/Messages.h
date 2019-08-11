@@ -11,11 +11,13 @@
 
 #pragma once
 
-extern const std::string FILE_NOT_FOUND;
-extern const std::string PIXELS_LABEL;
-extern const std::string SHOW_COLOR_LABEL;
-extern const std::string SHOW_GRAYSCALE_LABEL;
-extern const std::string TIME_ELAPSED;
-extern const std::string PROCESSING;
+using namespace std;
+
+extern const string FILE_NOT_FOUND;
+extern const string PIXELS_LABEL;
+extern const string SHOW_COLOR_LABEL;
+extern const string SHOW_GRAYSCALE_LABEL;
+extern const string TIME_ELAPSED;
+extern const string PROCESSING;
 
 #endif /* MESSAGES_H_ */

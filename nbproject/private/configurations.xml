@@ -38,25 +38,14 @@
         </df>
       </df>
       <df name="test">
-        <df name="CMakeFiles">
-          <df name="3.10.2">
-            <df name="CompilerIdC">
-              <df name="tmp">
-              </df>
-              <in>CMakeCCompilerId.c</in>
-            </df>
-            <df name="CompilerIdCXX">
-              <df name="tmp">
-              </df>
-              <in>CMakeCXXCompilerId.cpp</in>
-            </df>
-          </df>
-          <df name="CMakeTmp">
-          </df>
-          <df name="runTests.dir">
-          </df>
-          <in>feature_tests.c</in>
-          <in>feature_tests.cxx</in>
+        <df name="application">
+          <in>TestApplication.cpp</in>
+        </df>
+        <df name="fixtures">
+          <in>ImagesFixture.cpp</in>
+          <in>ImagesFixture.h</in>
+        </df>
+        <df name="images">
         </df>
         <df name="lib">
           <df name="googletest">
@@ -317,7 +306,14 @@
             </df>
           </df>
         </df>
-        <in>TestApplication.cpp</in>
+        <df name="processing">
+          <in>ImageTests.cpp</in>
+          <in>ImageTests.h</in>
+          <in>tbd</in>
+        </df>
+        <df name="workforce">
+          <in>tbd</in>
+        </df>
       </df>
     </df>
   </logicalFolder>

@@ -12,6 +12,20 @@
           <in>Orchestrator.h</in>
         </df>
       </df>
+      <df name="test">
+        <df name="fixtures">
+          <in>ImagesFixture.cpp</in>
+          <in>ImagesFixture.h</in>
+        </df>
+        <df name="processing">
+          <in>ImageTests.cpp</in>
+          <in>ImageTests.h</in>
+          <in>tbd</in>
+        </df>
+        <df name="workforce">
+          <in>tbd</in>
+        </df>
+      </df>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -48,13 +62,13 @@
               <pElem>/home/ernstv/build/opencv/opencv/modules/imgcodecs/include</pElem>
               <pElem>/home/ernstv/build/opencv/opencv/modules/features2d/include</pElem>
               <pElem>/home/ernstv/build/opencv/opencv/release</pElem>
-              <pElem>/usr/include/c++/4.2.1/utilit/build/include</pElem>
               <pElem>/usr/include/c++/4.2.1</pElem>
               <pElem>../../opencv/include</pElem>
               <pElem>/home/ernstv/build/opencv/opencv/modules/flann/include</pElem>
               <pElem>/home/ernstv/build/opencv/opencv/modules/core/include</pElem>
               <pElem>/home/ernstv/build/opencv/opencv/modules/highgui/include</pElem>
               <pElem>/home/ernstv/build/opencv/opencv/modules/imgproc/include</pElem>
+              <pElem>test</pElem>
             </incDir>
           </ccTool>
         </makeTool>
@@ -80,6 +94,18 @@
       <item path="src/processing/Orchestrator.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/processing/Orchestrator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="test/fixtures/ImagesFixture.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="test/fixtures/ImagesFixture.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="test/processing/ImageTests.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="test/processing/ImageTests.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="test/processing/tbd" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="test/workforce/tbd" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

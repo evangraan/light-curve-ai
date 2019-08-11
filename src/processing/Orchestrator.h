@@ -20,9 +20,11 @@
 #include "../workforce/WorkerPool.h"
 #include "../application/Messages.h"
 
-extern const std::string DATA_DIR;
-extern const std::string IMAGES_DIR;
-extern const std::string TEMPLATE;
+using namespace std;
+
+extern const string DATA_DIR;
+extern const string IMAGES_DIR;
+extern const string TEMPLATE;
 
 namespace LightCurveAnalysis {
     class Orchestrator {
@@ -38,7 +40,7 @@ namespace LightCurveAnalysis {
         void completeWork();
         void queueForWork(dirent * dp);
         
-        std::vector<WorkerThreading::WaitForCompletionFuture<void>> m_futures;
+        vector<WorkerThreading::WaitForCompletionFuture<void>> m_futures;
     };
 }
 #endif /* ORCHESTRATOR_H */

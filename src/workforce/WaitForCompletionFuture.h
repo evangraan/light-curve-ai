@@ -21,13 +21,15 @@
 #include <utility>
 #include <vector>
 
+using namespace std;
+
 namespace WorkerThreading
 {
     template <typename T>
     class WaitForCompletionFuture {
     public:
-        WaitForCompletionFuture(std::future<T>&& future)
-        : m_future{std::move(future)}
+        WaitForCompletionFuture(future<T>&& future)
+        : m_future{move(future)}
         {
         }
 
@@ -47,7 +49,7 @@ namespace WorkerThreading
         }
 
     private:
-        std::future<T> m_future;
+        future<T> m_future;
     };
 }
 #endif /* WAITFORCOMPLETIONFUTURE_H */

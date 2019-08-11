@@ -22,13 +22,15 @@
 #include <vector>
 #include "IWorker.h"
 
+using namespace std;
+
 namespace WorkerThreading
 {
     template <typename Func>
     class SimpleWorker : public IWorker {
     public:
         SimpleWorker(Func&& func)
-        : m_func{std::move(func)}
+        : m_func{move(func)}
         {
         }
 
