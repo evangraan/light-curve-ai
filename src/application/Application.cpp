@@ -4,8 +4,6 @@
 #include "Messages.h"
 #include "../processing/Orchestrator.h"
 
-using namespace WorkerThreading;
-using namespace Workforce;
 using namespace LightCurveAnalysis;
 
 int main(int argc, char **argv) {
