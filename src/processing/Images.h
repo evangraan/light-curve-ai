@@ -17,17 +17,18 @@
 using namespace std;
 using namespace cv;
 
-#pragma once
-
 #ifndef IMAGES_H_
 #define IMAGES_H_
 
-class Images {
+#pragma once
 
-public:
-	Images();
-	virtual ~Images();
-        double compare(Mat src_base, Mat src_test1, int method);
-};
+namespace LightCurveAnalysis{
+    class Images {
 
+    public:
+            Images();
+            virtual ~Images();
+            double compare(Mat src_base, Mat src_test1, int method);
+    };
+}
 #endif /* IMAGES_H_ */

@@ -8,6 +8,8 @@
 #ifndef IWORKER_H
 #define IWORKER_H
 
+#pragma once
+
 namespace WorkerThreading
 {
     class IWorker

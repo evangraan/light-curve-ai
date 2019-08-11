@@ -8,6 +8,8 @@
 #ifndef WAITFORCOMPLETIONFUTURE_H
 #define WAITFORCOMPLETIONFUTURE_H
 
+#pragma once
+
 #include <algorithm>
 #include <atomic>
 #include <cstdint>

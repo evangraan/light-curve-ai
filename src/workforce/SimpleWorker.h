@@ -8,6 +8,8 @@
 #ifndef SIMPLEWORKER_H
 #define SIMPLEWORKER_H
 
+#pragma once
+
 #include <algorithm>
 #include <atomic>
 #include <cstdint>

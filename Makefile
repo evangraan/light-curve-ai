@@ -8,10 +8,11 @@ WORKFORCE=src/workforce
 WORKFORCE_SOURCES=$(WORKFORCE)/IWorker.cpp $(WORKFORCE)/SimpleWorker.cpp $(WORKFORCE)/WorkQueue.cpp $(WORKFORCE)/WorkerPool.cpp $(WORKFORCE)/WaitForCompletionFuture.cpp
 APPLICATION=src/application
 APPLICATION_SOURCES=$(APPLICATION)/Application.cpp
-ASPECTS_SOURCES=$(APPLICATION)/Images.cpp $(APPLICATION)/Messages.cpp
+ASPECTS_SOURCES=$(APPLICATION)/Messages.cpp
 PROCESSING=src/processing
-PROCESSING_SOURCES=$(PROCESSING)/ChiSquaredProcessor.cpp
+PROCESSING_SOURCES=$(PROCESSING)/ChiSquaredProcessor.cpp $(PROCESSING)/Orchestrator.cpp $(PROCESSING)/Images.cpp
 EXECUTABLE=lcai
+OUTPUT=images/lc/*comparison
 
 default: all
 
@@ -35,3 +36,4 @@ clean:
 	rm -f $(ASPECTS)/$(ARTIFACTS)
 	rm -f $(PROCESSING)/$(ARTIFACTS)
 	rm -f $(APPLICATION)/$(ARTIFACTS)
+	rm -f $(OUTPUT)

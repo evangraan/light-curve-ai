@@ -14,7 +14,9 @@
 #ifndef CHISQUAREDPROCESSOR_H
 #define CHISQUAREDPROCESSOR_H
 
-#include "../application/Images.h"
+#pragma once
+
+#include "Images.h"
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
@@ -27,6 +29,10 @@ namespace LightCurveAnalysis{
         ChiSquaredProcessor(const ChiSquaredProcessor& orig);
         virtual ~ChiSquaredProcessor();
         void process(std::string templateCurvePath, std::string curvePath);
+        
+    private:
+        double calculateFit(std::string templateCurvePath, std::string curvePath);
+        void outputResult(double fit, std::string curvePath);
     };
 }
 

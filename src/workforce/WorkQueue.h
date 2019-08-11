@@ -1,7 +1,7 @@
-#pragma once
-
 #ifndef WORKQUEUE_H
 #define WORKQUEUE_H
+
+#pragma once
 
 #include <atomic>
 #include <condition_variable>
