@@ -16,6 +16,7 @@
 
 #pragma once
 
+#include "IProcessor.h"
 #include "Images.h"
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
@@ -23,16 +24,16 @@
 #include <fstream>
 
 namespace LightCurveAnalysis{
-    class ChiSquaredProcessor {
+    class ChiSquaredProcessor : IProcessor{
     public:
         ChiSquaredProcessor();
         ChiSquaredProcessor(const ChiSquaredProcessor& orig);
         virtual ~ChiSquaredProcessor();
-        void process(std::string templateCurvePath, std::string curvePath);
+        void process(std::string templateCurvePath, std::string curvePath) override;
         
     private:
-        double calculateFit(std::string templateCurvePath, std::string curvePath);
-        void outputResult(double fit, std::string curvePath);
+        double calculateFit(std::string templateCurvePath, std::string curvePath) override;
+        void outputResult(double fit, std::string curvePath) override;
     };
 }
 

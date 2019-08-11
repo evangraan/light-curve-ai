@@ -11,14 +11,16 @@
       <df name="src">
         <df name="application">
           <in>Application.cpp</in>
-          <in>Images.cpp</in>
-          <in>Images.h</in>
           <in>Messages.cpp</in>
           <in>Messages.h</in>
         </df>
         <df name="processing">
           <in>ChiSquaredProcessor.cpp</in>
           <in>ChiSquaredProcessor.h</in>
+          <in>IProcessor.cpp</in>
+          <in>IProcessor.h</in>
+          <in>Images.cpp</in>
+          <in>Images.h</in>
           <in>Orchestrator.cpp</in>
           <in>Orchestrator.h</in>
         </df>

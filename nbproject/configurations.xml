@@ -6,6 +6,8 @@
         <df name="processing">
           <in>ChiSquaredProcessor.cpp</in>
           <in>ChiSquaredProcessor.h</in>
+          <in>IProcessor.cpp</in>
+          <in>IProcessor.h</in>
           <in>Orchestrator.cpp</in>
           <in>Orchestrator.h</in>
         </df>
@@ -70,6 +72,10 @@
             ex="false"
             tool="3"
             flavor2="0">
+      </item>
+      <item path="src/processing/IProcessor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/processing/IProcessor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/processing/Orchestrator.cpp" ex="false" tool="1" flavor2="0">
       </item>

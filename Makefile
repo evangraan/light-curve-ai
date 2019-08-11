@@ -10,7 +10,7 @@ APPLICATION=src/application
 APPLICATION_SOURCES=$(APPLICATION)/Application.cpp
 ASPECTS_SOURCES=$(APPLICATION)/Messages.cpp
 PROCESSING=src/processing
-PROCESSING_SOURCES=$(PROCESSING)/ChiSquaredProcessor.cpp $(PROCESSING)/Orchestrator.cpp $(PROCESSING)/Images.cpp
+PROCESSING_SOURCES=$(PROCESSING)/IProcessor.cpp $(PROCESSING)/ChiSquaredProcessor.cpp $(PROCESSING)/Orchestrator.cpp $(PROCESSING)/Images.cpp
 EXECUTABLE=lcai
 OUTPUT=images/lc/*comparison
 
