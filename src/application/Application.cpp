@@ -1,12 +1,7 @@
 #include <utility>
 #include <chrono>
 #include <sys/types.h>
-#include <dirent.h>
 #include "Messages.h"
-#include "../processing/Images.h"
-#include "../processing/ChiSquaredProcessor.h"
-#include "../workforce/WorkQueue.h"
-#include "../workforce/WorkerPool.h"
 #include "../processing/Orchestrator.h"
 
 using namespace WorkerThreading;
