@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
  
 TEST(SquareTest, PositiveNos) { 
-    ASSERT_EQ(6, 6*6);
+    ASSERT_EQ(36, 6*6);
 }
  
 TEST(SquareTest, NegativeNos) {
